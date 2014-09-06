@@ -1,0 +1,142 @@
+{
+  "periods": {
+    "HR": {
+      "start": "8:30",
+      "end": "8:35"
+    },
+    "1": {
+      "start": "8:37",
+      "end": "9:17"
+    },
+    "2": {
+      "start": "9:19",
+      "end": "9:59"
+    },
+    "Break": {
+      "start": "9:59",
+      "end": "10:19"
+    },
+    "3": {
+      "start": "10:19",
+      "end": "10:59"
+    }
+  },
+  "weeks": [
+    {
+      "name": "A",
+      "days": {
+        "monday": {
+          "classes": [
+            {
+              "name": "homeroom",
+              "start": "8:30",
+              "end": "8:35"
+            },
+            {
+              "name": "German",
+              "start": "10:19",
+              "end": "10:59"
+            },
+            {
+              "name": "Mathematics",
+              "start": "11:01",
+              "end": "11:41"
+            },
+            {
+              "name": "Economics",
+              "start": "11:43",
+              "end": "13:05"
+            },
+            {
+              "name": "Computer Science",
+              "start": "8:30",
+              "end": "8:35"
+            },
+            {
+              "name": "English",
+              "start": "8:30",
+              "end": "8:35"
+            },
+
+          ]
+        },
+        "tuesday": {
+          "classes": [
+            {
+              "name": "homeroom",
+              "start": "8:30",
+              "end": "8:35"
+            }
+          ]
+
+        },
+        "wednesday": {
+          "classes": [
+            {
+              "name": "homeroom",
+              "start": "8:30",
+              "end": "8:35"
+            }
+          ]
+
+        },
+        "thursday": {
+          "classes": [
+            {
+              "name": "homeroom",
+              "start": "8:30",
+              "end": "8:35"
+            }
+          ]
+
+        },
+        "friday": {
+          "classes": [
+            {
+              "name": "homeroom",
+              "start": "8:30",
+              "end": "8:35"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "classes": [
+    {
+      "name": "Economics",
+      "teacher": "Ms. Blink",
+      "room": "224"
+    },
+    {
+      "name": "English",
+      "teacher": "Mr.Porter",
+      "room": "214"
+    },
+    {
+      "name": "Computer Science",
+      "teacher": "Mr. Locke-Scobi",
+      "room": "E50"
+    },
+    {
+      "name": "German",
+      "teacher": "Ms. Plank-Cekon",
+      "room": "131"
+    },
+    {
+      "name": "TOK",
+      "teacher": "Mr. O'Rourke",
+      "room": "230"
+    },
+    {
+      "name": "Mathematics",
+      "teacher": "Ms. Radke",
+      "room": "224"
+    },
+    {
+      "name": "Homeroom",
+      "teacher": "Ms. Blink",
+      "room": "244"
+    }
+  ]
+}
