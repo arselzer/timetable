@@ -64,7 +64,7 @@
             {
               "name": "English",
               "periods": ["8", "9"]
-            },
+            }
           ]
         },
         "tuesday": {
@@ -216,7 +216,7 @@
             {
               "name": "English",
               "periods": ["8", "9"]
-            },
+            }
           ]
         },
         "tuesday": {
