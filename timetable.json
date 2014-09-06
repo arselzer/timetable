@@ -1,24 +1,38 @@
 {
+  "school_start": "2014-08-26",
   "periods": {
     "HR": {
-      "start": "8:30",
-      "end": "8:35"
+      "time": ["8:30", "8:35"]
     },
     "1": {
-      "start": "8:37",
-      "end": "9:17"
+      "time": ["8:37", "9:17"]
     },
     "2": {
-      "start": "9:19",
-      "end": "9:59"
+      "time": ["9:19", "9:59"]
     },
     "Break": {
-      "start": "9:59",
-      "end": "10:19"
+      "time": ["9:59", "10:19"]
     },
     "3": {
-      "start": "10:19",
-      "end": "10:59"
+      "time": ["10:19", "10:59"]
+    },
+    "4": {
+      "time": ["11:01","11:41"]
+    },
+    "5": {
+      "time": ["12:25", "13:05"]
+    },
+    "7": {
+      "time": ["13:05", "13:51"]
+    },
+    "8": {
+      "time": ["13:53", "14:33"]
+    },
+    "9": {
+      "time": ["14:35", "15:15"]
+    },
+    "10": {
+      "time": ["15:17", "15:57"]
     }
   },
   "weeks": [
@@ -28,44 +42,56 @@
         "monday": {
           "classes": [
             {
-              "name": "homeroom",
-              "start": "8:30",
-              "end": "8:35"
+              "name": "Homeroom",
+              "periods": ["HR"]
             },
             {
               "name": "German",
-              "start": "10:19",
-              "end": "10:59"
+              "periods": ["3"]
             },
             {
               "name": "Mathematics",
-              "start": "11:01",
-              "end": "11:41"
+              "periods": ["4"]
             },
             {
               "name": "Economics",
-              "start": "11:43",
-              "end": "13:05"
+              "periods": ["5", "6"]
             },
             {
               "name": "Computer Science",
-              "start": "8:30",
-              "end": "8:35"
+              "periods": ["7"]
             },
             {
               "name": "English",
-              "start": "8:30",
-              "end": "8:35"
+              "periods": ["8", "9"]
             },
-
           ]
         },
         "tuesday": {
           "classes": [
             {
-              "name": "homeroom",
-              "start": "8:30",
-              "end": "8:35"
+              "name": "Homeroom",
+              "periods": ["HR"]
+            },
+            {
+              "name": "Homeroom",
+              "periods": ["3"]
+            },
+            {
+              "name": "History",
+              "periods": ["4"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["6"]
+            },
+            {
+              "name": "German",
+              "periods": ["8"]
+            },
+            {
+              "name": "Mathematics",
+              "periods": ["9", "10"]
             }
           ]
 
@@ -73,9 +99,28 @@
         "wednesday": {
           "classes": [
             {
-              "name": "homeroom",
-              "start": "8:30",
-              "end": "8:35"
+              "name": "Homeroom",
+              "periods": ["HR"]
+            },
+            {
+              "name": "Economics",
+              "periods": ["1", "2"]
+            },
+            {
+              "name": "German",
+              "periods": ["3", "4"]
+            },
+            {
+              "name": "History",
+              "periods": ["5"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["7"]
+            },
+            {
+              "name": "TOK",
+              "periods": ["9"]
             }
           ]
 
@@ -83,9 +128,36 @@
         "thursday": {
           "classes": [
             {
-              "name": "homeroom",
-              "start": "8:30",
-              "end": "8:35"
+              "name": "Homeroom",
+              "periods": ["HR"]
+            },
+            {
+              "name": "English",
+              "periods": ["1"]
+            },
+            {
+              "name": "Economics",
+              "periods": ["2"]
+            },
+            {
+              "name": "Mathematics",
+              "periods": ["3"]
+            },
+            {
+              "name": "TOK",
+              "periods": ["4"]
+            },
+            {
+              "name": "History",
+              "periods": ["6"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["8"]
+            },
+            {
+              "name": "German",
+              "periods": ["9", "10"]
             }
           ]
 
@@ -93,9 +165,176 @@
         "friday": {
           "classes": [
             {
-              "name": "homeroom",
-              "start": "8:30",
-              "end": "8:35"
+              "name": "Homeroom",
+              "periods": ["HR"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["1", "2"]
+            },
+            {
+              "name": "Economics",
+              "periods": ["3"]
+            },
+            {
+              "name": "English",
+              "periods": ["8"]
+            },
+            {
+              "name": "History",
+              "periods": ["9"]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "A",
+      "days": {
+        "monday": {
+          "classes": [
+            {
+              "name": "Homeroom",
+              "periods": ["HR"]
+            },
+            {
+              "name": "German",
+              "periods": ["3"]
+            },
+            {
+              "name": "Mathematics",
+              "periods": ["4"]
+            },
+            {
+              "name": "Economics",
+              "periods": ["5", "6"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["7"]
+            },
+            {
+              "name": "English",
+              "periods": ["8", "9"]
+            },
+          ]
+        },
+        "tuesday": {
+          "classes": [
+            {
+              "name": "Homeroom",
+              "periods": ["HR"]
+            },
+            {
+              "name": "Homeroom",
+              "periods": ["3"]
+            },
+            {
+              "name": "History",
+              "periods": ["4"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["6"]
+            },
+            {
+              "name": "German",
+              "periods": ["8"]
+            },
+            {
+              "name": "Mathematics",
+              "periods": ["9", "10"]
+            }
+          ]
+
+        },
+        "wednesday": {
+          "classes": [
+            {
+              "name": "Homeroom",
+              "periods": ["HR"]
+            },
+            {
+              "name": "Economics",
+              "periods": ["1", "2"]
+            },
+            {
+              "name": "German",
+              "periods": ["3", "4"]
+            },
+            {
+              "name": "History",
+              "periods": ["5"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["7"]
+            },
+            {
+              "name": "TOK",
+              "periods": ["9"]
+            }
+          ]
+
+        },
+        "thursday": {
+          "classes": [
+            {
+              "name": "Homeroom",
+              "periods": ["HR"]
+            },
+            {
+              "name": "English",
+              "periods": ["1"]
+            },
+            {
+              "name": "Economics",
+              "periods": ["2"]
+            },
+            {
+              "name": "Mathematics",
+              "periods": ["3"]
+            },
+            {
+              "name": "TOK",
+              "periods": ["4"]
+            },
+            {
+              "name": "History",
+              "periods": ["6"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["8"]
+            },
+            {
+              "name": "German",
+              "periods": ["9", "10"]
+            }
+          ]
+
+        },
+        "friday": {
+          "classes": [
+            {
+              "name": "Homeroom",
+              "periods": ["HR"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["1", "2"]
+            },
+            {
+              "name": "Economics",
+              "periods": ["3"]
+            },
+            {
+              "name": "English",
+              "periods": ["8"]
+            },
+            {
+              "name": "History",
+              "periods": ["9"]
             }
           ]
         }
