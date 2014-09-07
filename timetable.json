@@ -1,40 +1,55 @@
 {
   "school_start": "2014-08-26",
-  "periods": {
-    "HR": {
+  "periods": [
+    {
+      "name": "H",
       "time": ["8:30", "8:35"]
     },
-    "1": {
+    {
+      "name": "1",
       "time": ["8:37", "9:17"]
     },
-    "2": {
+    {
+      "name": "2",
       "time": ["9:19", "9:59"]
     },
-    "Break": {
+    {
+      "name": "B",
       "time": ["9:59", "10:19"]
     },
-    "3": {
+    {
+      "name": "3",
       "time": ["10:19", "10:59"]
     },
-    "4": {
+    {
+      "name": "4",
       "time": ["11:01","11:41"]
     },
-    "5": {
+    {
+      "name": "5",
+      "time": ["11:43", "12:23"]
+    },
+    {
+      "name": "6",
       "time": ["12:25", "13:05"]
     },
-    "7": {
-      "time": ["13:05", "13:51"]
+    {
+      "name": "7",
+      "time": ["13:07", "13:51"]
     },
-    "8": {
+    {
+      "name": "8",
       "time": ["13:53", "14:33"]
     },
-    "9": {
+    {
+      "name": "9",
       "time": ["14:35", "15:15"]
     },
-    "10": {
+    {
+      "name": "10",
       "time": ["15:17", "15:57"]
     }
-  },
+  ],
   "weeks": [
     {
       "name": "A",
@@ -43,7 +58,7 @@
           "classes": [
             {
               "name": "Homeroom",
-              "periods": ["HR"]
+              "periods": ["H"]
             },
             {
               "name": "German",
@@ -71,7 +86,7 @@
           "classes": [
             {
               "name": "Homeroom",
-              "periods": ["HR"]
+              "periods": ["H"]
             },
             {
               "name": "Homeroom",
@@ -100,7 +115,7 @@
           "classes": [
             {
               "name": "Homeroom",
-              "periods": ["HR"]
+              "periods": ["H"]
             },
             {
               "name": "Economics",
@@ -129,7 +144,7 @@
           "classes": [
             {
               "name": "Homeroom",
-              "periods": ["HR"]
+              "periods": ["H"]
             },
             {
               "name": "English",
@@ -166,7 +181,7 @@
           "classes": [
             {
               "name": "Homeroom",
-              "periods": ["HR"]
+              "periods": ["H"]
             },
             {
               "name": "Computer Science",
@@ -195,7 +210,7 @@
           "classes": [
             {
               "name": "Homeroom",
-              "periods": ["HR"]
+              "periods": ["H"]
             },
             {
               "name": "German",
@@ -223,7 +238,7 @@
           "classes": [
             {
               "name": "Homeroom",
-              "periods": ["HR"]
+              "periods": ["H"]
             },
             {
               "name": "Homeroom",
@@ -252,7 +267,7 @@
           "classes": [
             {
               "name": "Homeroom",
-              "periods": ["HR"]
+              "periods": ["H"]
             },
             {
               "name": "Economics",
@@ -281,7 +296,7 @@
           "classes": [
             {
               "name": "Homeroom",
-              "periods": ["HR"]
+              "periods": ["H"]
             },
             {
               "name": "English",
@@ -318,7 +333,7 @@
           "classes": [
             {
               "name": "Homeroom",
-              "periods": ["HR"]
+              "periods": ["H"]
             },
             {
               "name": "Computer Science",
@@ -345,37 +360,50 @@
     {
       "name": "Economics",
       "teacher": "Ms. Blink",
-      "room": "224"
+      "room": "224",
+      "color": "rgb(179, 156, 62)"
     },
     {
       "name": "English",
       "teacher": "Mr.Porter",
-      "room": "214"
+      "room": "214",
+      "color": "rgb(53, 133, 49)"
     },
     {
       "name": "Computer Science",
       "teacher": "Mr. Locke-Scobi",
-      "room": "E50"
+      "room": "E50",
+      "color": "rgb(108, 62, 50)"
     },
     {
       "name": "German",
       "teacher": "Ms. Plank-Cekon",
-      "room": "131"
+      "room": "131",
+      "color": "rgb(41, 134, 161)"
     },
     {
       "name": "TOK",
       "teacher": "Mr. O'Rourke",
-      "room": "230"
+      "room": "230",
+      "color": "rgb(123, 67, 132)"
     },
     {
       "name": "Mathematics",
       "teacher": "Ms. Radke",
-      "room": "224"
+      "room": "224",
+      "color": "rgb(144, 66, 43)"
     },
     {
       "name": "Homeroom",
       "teacher": "Ms. Blink",
-      "room": "244"
+      "room": "244",
+      "color": "rgb(94, 106, 111)"
+    },
+    {
+      "name": "History",
+      "teacher": "Mr. Guthrie",
+      "room": "121",
+      "color": "rgb(183, 198, 65)"
     }
   ]
 }
