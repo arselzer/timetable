@@ -25,7 +25,7 @@
 .period {
   height: 26px;
   padding-top: 6px;
-  background-color: rgb(145, 192, 234);
+  background-color: rgb(163, 196, 224);
   /*border-left: 1px solid rgb(53, 129, 162);*/
   text-align: center;
   display: block;
@@ -35,6 +35,7 @@
 .day {
   display: block;
   height: 100px;
+  margin-top: 2px;
 }
 
 .day > .name {
@@ -43,6 +44,7 @@
   float: left;
   width: 36px;
   height: 100px;
+  padding-top: 20px;
 
   transform: rotate(-90deg) translate(-10px, 20px);
   -webkit-transform: rotate(-90deg) translate(-10px, 20px);
@@ -56,6 +58,7 @@
   height: 100px;
   text-align: center;
   overflow: hidden;
+  /*background-color: rgb(185, 201, 205); */
 }
 
 .section > div {
