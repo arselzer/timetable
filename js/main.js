@@ -56,7 +56,9 @@ $.getJSON("timetable.json", function(data) {
   var weekDates = data.week_dates
   console.log(weeks)
 
-  var currentWeek = getCurrentWeek(weeks, weekDates)//weeks[0] // TODO, make dynamic
+  var currentWeek = getCurrentWeek(weekDates, weeks)//weeks[0] // TODO, make dynamic
+  if (!currentWeek)
+    return console.log("fail!")
 
   /* Create timetable header */
 
@@ -95,12 +97,12 @@ $.getJSON("timetable.json", function(data) {
     var sections = []
 
     day.classes.forEach(function(cl) {
-      var classType
+      var classDefinition
       var fullPeriods = []
 
       classes.forEach(function(definedClass) {
         if (cl.name === definedClass.name)
-          classType = definedClass
+          classDefinition = definedClass
       })
 
       periods.forEach(function(period) {
@@ -113,10 +115,14 @@ $.getJSON("timetable.json", function(data) {
 
       var sectionWidth = fullPeriods[fullPeriods.length-1].end - fullPeriods[0].start
 
-      cl.class = classType
+      cl.class = classDefinition
       cl.width = width / (dayTime / sectionWidth)
       cl.periods = fullPeriods
       cl.name = cl.name
+      console.log(cl.room)
+      if (!cl.room) {
+        cl.room = cl.class.room
+      }
 
       sections.push(cl)
     })
@@ -152,7 +158,7 @@ $.getJSON("timetable.json", function(data) {
 
         sectionDiv.append($("<div>")
           .addClass("room")
-          .text(section.class.room))
+          .text(section.room))
       }
 
       row.append(sectionDiv)
@@ -163,6 +169,46 @@ $.getJSON("timetable.json", function(data) {
   console.log(err)
 })
 
-function getCurrentWeek(weeks) {
-  return weeks[0]
+function getCurrentWeek(weekDates, weeks) {
+  var date = new Date()
+  var currentYear = date.getFullYear()
+
+  var foundWeek
+
+  // Week A, Week B and so
+  for (var key in weekDates) {
+    var week = weekDates[key]
+
+    var found = false
+
+    // [month, day] pairs
+    week.forEach(function(start) {
+      var month = start[1]
+      var day = start[0]
+      var year = start[2]
+
+      var sevenDays = 7 * 24 * 60 * 60 * 1000
+
+      var weekStart = new Date(year, month, day)
+      console.log(weekStart.toString())
+      var difference = weekStart - date
+      console.log(difference, sevenDays)
+
+      if (difference < sevenDays && !(difference > sevenDays)) {
+        console.log("found")
+        found = true
+      }
+    })
+
+    if (found) {
+      foundWeek = key
+    }
+  }
+
+  var outWeek;
+  weeks.forEach(function(w) {
+    if (w.name === foundWeek)
+      outWeek = w
+  })
+  return outWeek || null
 }

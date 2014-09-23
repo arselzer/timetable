@@ -51,49 +51,47 @@
     }
   ],
   "week_dates": {
-    "2014": {
       "A": [
-        [25, 8],
-        [15, 9],
-        [29, 9],
-        [13, 10],
-        [3, 11],
-        [17, 11],
-        [1, 12],
-        [15, 12],
-        [12, 1],
-        [26, 1],
-        [9, 2],
-        [2, 3],
-        [16, 3],
-        [6, 4],
-        [20, 4],
-        [4, 5],
-        [18, 5],
-        [1, 6],
-        [15, 6]
+        [25, 7, 2014],
+        [15, 8, 2014],
+        [29, 8, 2014],
+        [13, 9, 2014],
+        [3, 10, 2014],
+        [17, 10, 2014],
+        [1, 11, 2014],
+        [15, 11, 2014],
+        [12, 12, 2014],
+        [26, 12, 2014],
+        [9, 1, 2015],
+        [2, 2, 2015],
+        [16, 2, 2015],
+        [6, 3, 2015],
+        [20, 3, 2015],
+        [4, 4, 2015],
+        [18, 4, 2015],
+        [1, 5, 2015],
+        [15, 5, 2015]
       ],
       "B": [
-        [1, 9],
-        [22, 9],
-        [6, 10],
-        [20, 10],
-        [10, 11],
-        [24, 11],
-        [8, 12],
-        [5, 1],
-        [19, 1],
-        [2, 2],
-        [23, 2],
-        [9, 3],
-        [23, 3],
-        [13, 4],
-        [27, 4],
-        [11, 5],
-        [8, 6],
-        [22, 6]
+        [1, 8, 2014],
+        [22, 8, 2014],
+        [6, 9, 2014],
+        [20, 9, 2014],
+        [10, 10, 2014],
+        [24, 10, 2014],
+        [8, 11, 2014],
+        [5, 12, 2014],
+        [19, 12, 2014],
+        [2, 1, 2015],
+        [23, 1, 2015],
+        [9, 2, 2015],
+        [23, 2, 2015],
+        [13, 3, 2015],
+        [27, 3, 2015],
+        [11, 4, 2015],
+        [8, 5, 2015],
+        [22, 5, 2015]
       ]
-    }
   },
   "weeks": [
     {
@@ -107,7 +105,8 @@
             },
             {
               "name": "German",
-              "periods": ["3"]
+              "periods": ["3"],
+              "room": "125"
             },
             {
               "name": "Mathematics",
@@ -119,7 +118,8 @@
             },
             {
               "name": "Computer Science",
-              "periods": ["7"]
+              "periods": ["7"],
+              "room": "243"
             },
             {
               "name": "English",
@@ -143,11 +143,13 @@
             },
             {
               "name": "Computer Science",
-              "periods": ["6"]
+              "periods": ["6"],
+              "room": "243"
             },
             {
               "name": "German",
-              "periods": ["8"]
+              "periods": ["8"],
+              "room": "131"
             },
             {
               "name": "Mathematics",
@@ -168,7 +170,8 @@
             },
             {
               "name": "German",
-              "periods": ["3", "4"]
+              "periods": ["3", "4"],
+              "room": "131"
             },
             {
               "name": "History",
@@ -176,7 +179,8 @@
             },
             {
               "name": "Computer Science",
-              "periods": ["7"]
+              "periods": ["7"],
+              "room": "214"
             },
             {
               "name": "TOK",
@@ -213,11 +217,13 @@
             },
             {
               "name": "Computer Science",
-              "periods": ["8"]
+              "periods": ["8"],
+              "room": "243"
             },
             {
               "name": "German",
-              "periods": ["9", "10"]
+              "periods": ["9", "10"],
+              "room": "131"
             }
           ]
 
@@ -230,7 +236,8 @@
             },
             {
               "name": "Computer Science",
-              "periods": ["1", "2"]
+              "periods": ["1", "2"],
+              "room": "214"
             },
             {
               "name": "Economics",
@@ -258,24 +265,26 @@
               "periods": ["H"]
             },
             {
-              "name": "German",
-              "periods": ["3"]
-            },
-            {
-              "name": "Mathematics",
-              "periods": ["4"]
-            },
-            {
               "name": "Economics",
-              "periods": ["5", "6"]
-            },
-            {
-              "name": "Computer Science",
-              "periods": ["7"]
+              "periods": ["1", "2"]
             },
             {
               "name": "English",
-              "periods": ["8", "9"]
+              "periods": ["3"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["7"],
+              "room": "243"
+            },
+            {
+              "name": "German",
+              "periods": ["8"],
+              "room": "138"
+            },
+            {
+              "name": "TOK",
+              "periods": ["9"]
             }
           ]
         },
@@ -286,24 +295,26 @@
               "periods": ["H"]
             },
             {
-              "name": "Homeroom",
-              "periods": ["3"]
-            },
-            {
-              "name": "History",
-              "periods": ["4"]
-            },
-            {
-              "name": "Computer Science",
-              "periods": ["6"]
-            },
-            {
-              "name": "German",
-              "periods": ["8"]
+              "name": "Economics",
+              "periods": ["1", "2"]
             },
             {
               "name": "Mathematics",
-              "periods": ["9", "10"]
+              "periods": ["3"]
+            },
+            {
+              "name": "TOK",
+              "periods": ["4"]
+            },
+            {
+              "name": "German",
+              "periods": ["9"],
+              "room": "131"
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["10"],
+              "room": "243"
             }
           ]
 
@@ -315,24 +326,26 @@
               "periods": ["H"]
             },
             {
-              "name": "Economics",
-              "periods": ["1", "2"]
+              "name": "Computer Science",
+              "periods": ["2"],
+              "room": "E50"
             },
             {
               "name": "German",
-              "periods": ["3", "4"]
+              "periods": ["3", "4"],
+              "room": "131"
+            },
+            {
+              "name": "Mathematics",
+              "periods": ["5", "6"]
+            },
+            {
+              "name": "English",
+              "periods": ["8", "9"]
             },
             {
               "name": "History",
-              "periods": ["5"]
-            },
-            {
-              "name": "Computer Science",
-              "periods": ["7"]
-            },
-            {
-              "name": "TOK",
-              "periods": ["9"]
+              "periods": ["10"]
             }
           ]
 
@@ -344,35 +357,27 @@
               "periods": ["H"]
             },
             {
-              "name": "English",
-              "periods": ["1"]
-            },
-            {
-              "name": "Economics",
-              "periods": ["2"]
-            },
-            {
-              "name": "Mathematics",
+              "name": "Homeroom",
               "periods": ["3"]
             },
             {
-              "name": "TOK",
-              "periods": ["4"]
+              "name": "Computer Science",
+              "periods": ["4"],
+              "room": "E50"
             },
             {
               "name": "History",
               "periods": ["6"]
             },
             {
-              "name": "Computer Science",
+              "name": "English",
               "periods": ["8"]
             },
             {
-              "name": "German",
-              "periods": ["9", "10"]
+              "name": "Economics",
+              "periods": ["9"]
             }
           ]
-
         },
         "friday": {
           "classes": [
@@ -381,20 +386,26 @@
               "periods": ["H"]
             },
             {
-              "name": "Computer Science",
-              "periods": ["1", "2"]
+              "name": "German",
+              "periods": ["1", "2"],
+              "room": "225"
             },
             {
               "name": "Economics",
               "periods": ["3"]
             },
             {
-              "name": "English",
-              "periods": ["8"]
+              "name": "Mathematics",
+              "periods": ["4"]
             },
             {
               "name": "History",
-              "periods": ["9"]
+              "periods": ["5", "6"]
+            },
+            {
+              "name": "Computer Science",
+              "periods": ["8", "9"],
+              "room": "214"
             }
           ]
         }
