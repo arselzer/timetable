@@ -259,7 +259,7 @@ function getTextColorFromBackground(c) {
   // http://stackoverflow.com/questions/1855884/determine-font-color-based-on-background-color
   console.log(brightness(c.r, c.g, c.b))
   if (brightness(c.r, c.g, c.b) > 0.5) {
-    return rgb(65, 65, 65)
+    return rgb(34, 34, 34)
   }
   else {
     return rgb(222, 222, 222)

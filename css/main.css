@@ -25,8 +25,9 @@
 .period {
   height: 26px;
   padding-top: 6px;
-  background-color: rgb(163, 196, 224);
+  background-color: rgb(133, 163, 228);
   /*border-left: 1px solid rgb(53, 129, 162);*/
+  border: 1px solid #000;
   text-align: center;
   display: block;
   float: left;
