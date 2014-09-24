@@ -136,9 +136,16 @@ $.getJSON("timetable.json", function(data) {
     }
 
     sections.forEach(function(section) {
+      var color = /rgb\((.*)\)/.exec(section.class.color)
+      var c = color[1].split(",").map(function(val) {
+        return val.trim()
+      })
+      console.log(c)
+
       var sectionDiv = $("<div>")
         .css("width", section.width)
         .css("background-color", section.class.color)
+        .css("color", getTextColorFromBackground({r: c[0], g: c[1], b: c[2]}))
         .addClass("section")
 
       if (section.class) {
@@ -237,4 +244,24 @@ function getCurrentWeek(weekDates, weeks) {
       outWeek = w
   })
   return outWeek || null
+}
+
+function getTextColorFromBackground(c) {
+  function rgb(r, g, b) {
+    return "rgb(" + r + "," + g + "," + b + ")"
+  }
+
+  function brightness(r, g, b) {
+    // http://stackoverflow.com/questions/596216/formula-to-determine-brightness-of-rgb-color
+    return (r * 0.2126 + g * 0.7152 + b * 0.0722) / 255
+  }
+
+  // http://stackoverflow.com/questions/1855884/determine-font-color-based-on-background-color
+  console.log(brightness(c.r, c.g, c.b))
+  if (brightness(c.r, c.g, c.b) > 0.5) {
+    return rgb(65, 65, 65)
+  }
+  else {
+    return rgb(222, 222, 222)
+  }
 }
