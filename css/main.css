@@ -61,7 +61,26 @@
   /*background-color: rgb(185, 201, 205); */
 }
 
+.section {
+  position: relative;
+  curser: default;
+}
+
 .section > div {
   display: block;
-  margin-top: 4px;
+  padding-top: 4px;
+  pointer-events: none;
+}
+
+.section > .popup {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(100, 144, 181);
+  font-size: 14px;
+  padding-top: 41px;
+  text-align: center;
 }

@@ -79,7 +79,6 @@ $.getJSON("timetable.json", function(data) {
 
   for (var key in currentWeek.days) {
     var day = currentWeek.days[key]
-    console.log(day)
 
     // row = one day
     var row = $("<div>")
@@ -119,7 +118,6 @@ $.getJSON("timetable.json", function(data) {
       cl.width = width / (dayTime / sectionWidth)
       cl.periods = fullPeriods
       cl.name = cl.name
-      console.log(cl.room)
       if (!cl.room) {
         cl.room = cl.class.room
       }
@@ -131,7 +129,6 @@ $.getJSON("timetable.json", function(data) {
     for (var i = 0; i < day.classes.length - 1; i++) {
       var curClass = day.classes[i],
           nextClass = day.classes[i+1]
-          console.log(curClass)
 
       curClass.timeToNext = (nextClass.periods[0].start - curClass.periods[curClass.periods.length-1].end)
 
@@ -162,6 +159,38 @@ $.getJSON("timetable.json", function(data) {
       }
 
       row.append(sectionDiv)
+
+      // hover popup
+      sectionDiv.on("mouseover", function() {
+        if (section.popupOpen !== true) {
+          var popup = $('<div class="popup">')
+            .text(section.periods[0].time[0] + " - " + section.periods[section.periods.length-1].time[1])
+          sectionDiv.append(popup)
+        }
+      })
+
+      sectionDiv.on("mouseout", function() {
+        if (!section.popupOpen) {
+          var popup = sectionDiv.find(".popup")
+          popup.remove()
+        }
+      })
+
+      // click popup toggle
+      sectionDiv.on("click", function() {
+        if (!section.popupOpen) {
+          section.popupOpen = true
+          sectionDiv.find(".popup").remove() // clear the hover popup
+
+          var popup = $('<div class="popup">')
+            .text(section.periods[0].time[0] + " - " + section.periods[section.periods.length-1].time[1])
+          sectionDiv.append(popup)
+        }
+        else {
+          section.popupOpen = false
+          sectionDiv.find(".popup").remove()
+        }
+      })
     })
     tt.append(row)
   }
@@ -190,12 +219,9 @@ function getCurrentWeek(weekDates, weeks) {
       var sevenDays = 7 * 24 * 60 * 60 * 1000
 
       var weekStart = new Date(year, month, day)
-      console.log(weekStart.toString())
       var difference = weekStart - date
-      console.log(difference, sevenDays)
 
       if (difference < sevenDays && !(difference > sevenDays)) {
-        console.log("found")
         found = true
       }
     })
