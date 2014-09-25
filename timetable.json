@@ -150,6 +150,16 @@
               "periods": ["H"]
             },
             {
+              "name": "free",
+              "periods": ["1"],
+              "labels": []
+            },
+            {
+              "name": "free",
+              "periods": ["2"],
+              "labels": []
+            },
+            {
               "name": "Homeroom",
               "periods": ["3"]
             },
@@ -314,6 +324,11 @@
             },
             {
               "name": "free",
+              "periods": ["5"],
+              "labels": []
+            },
+            {
+              "name": "free",
               "periods": ["6"],
               "labels": [
                 "Alwin"
@@ -365,6 +380,16 @@
                 "Jakub",
                 "Alwin"
               ]
+            },
+            {
+              "name": "free",
+              "periods": ["5"],
+              "labels": []
+            },
+            {
+              "name": "free",
+              "periods": ["6"],
+              "labels": []
             },
             {
               "name": "Computer Science",
@@ -426,6 +451,11 @@
                 "Andri",
                 "Nikitas"
               ]
+            },
+            {
+              "name": "free",
+              "periods": ["8"],
+              "labels": []
             },
             {
               "name": "German",
@@ -494,6 +524,16 @@
             {
               "name": "Homeroom",
               "periods": ["H"]
+            },
+            {
+              "name": "free",
+              "periods": ["1"],
+              "labels": []
+            },
+            {
+              "name": "free",
+              "periods": ["2"],
+              "labels": []
             },
             {
               "name": "Homeroom",

@@ -177,12 +177,17 @@ $.getJSON("timetable.json", function(data) {
 
       row.append(sectionDiv)
 
+      var currentView = $(".current-view")
+
       // hover popup
       sectionDiv.on("mouseover", function() {
         if (section.popupOpen !== true) {
+          var timeRangeString = section.periods[0].time[0] + " - " + section.periods[section.periods.length-1].time[1]
           var popup = $('<div class="popup">')
-            .text(section.periods[0].time[0] + " - " + section.periods[section.periods.length-1].time[1])
+            .text(timeRangeString)
           sectionDiv.append(popup)
+
+          currentView.text(section.name + " " + timeRangeString)
         }
       })
 
@@ -190,22 +195,28 @@ $.getJSON("timetable.json", function(data) {
         if (!section.popupOpen) {
           var popup = sectionDiv.find(".popup")
           popup.remove()
+          currentView.text("")
         }
       })
 
       // click popup toggle
       sectionDiv.on("click", function() {
         if (!section.popupOpen) {
+          var timeRangeString = section.periods[0].time[0] + " - " + section.periods[section.periods.length-1].time[1]
           section.popupOpen = true
           sectionDiv.find(".popup").remove() // clear the hover popup
 
           var popup = $('<div class="popup">')
-            .text(section.periods[0].time[0] + " - " + section.periods[section.periods.length-1].time[1])
+            .text(timeRangeString)
           sectionDiv.append(popup)
+
+          currentView.text(section.name + " " + timeRangeString)
         }
         else {
           section.popupOpen = false
           sectionDiv.find(".popup").remove()
+
+          currentView.text("")
         }
       })
     })

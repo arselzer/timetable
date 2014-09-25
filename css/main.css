@@ -8,12 +8,19 @@
 
 .main {
   font-family: Helvetiva, Arial, sans-serif;
-  margin: 40px auto;
+  margin: 10px auto;
   width: 1000px;
 }
 
 .timetable {
   min-width: 1040px;
+}
+
+.current-view {
+  height: 80px;
+  font-size: 26px;
+  padding-top: 28px;
+  text-align: center;
 }
 
 .header {
