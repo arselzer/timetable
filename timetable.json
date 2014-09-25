@@ -104,6 +104,21 @@
               "periods": ["H"]
             },
             {
+              "name": "free",
+              "periods": ["1"],
+              "labels": [
+                "Alwin"
+              ]
+            },
+            {
+              "name": "free",
+              "periods": ["2"],
+              "labels": [
+                "Alwin",
+                "Andri"
+              ]
+            },
+            {
               "name": "German",
               "periods": ["3"],
               "room": "125"
@@ -123,7 +138,8 @@
             },
             {
               "name": "English",
-              "periods": ["8", "9"]
+              "periods": ["8", "9"],
+              "room": "222"
             }
           ]
         },
@@ -142,9 +158,27 @@
               "periods": ["4"]
             },
             {
+              "name": "free",
+              "periods": ["5"],
+              "labels": [
+                "Alwin",
+                "Andri"
+              ]
+            },
+            {
               "name": "Computer Science",
               "periods": ["6"],
               "room": "243"
+            },
+            {
+              "name": "free",
+              "periods": ["7"],
+              "labels": [
+                "Alwin",
+                "Jakub",
+                "Andri",
+                "Nikitas"
+              ]
             },
             {
               "name": "German",
@@ -175,12 +209,19 @@
             },
             {
               "name": "History",
-              "periods": ["5"]
+              "periods": ["5", "6"]
             },
             {
               "name": "Computer Science",
               "periods": ["7"],
               "room": "214"
+            },
+            {
+              "name": "free",
+              "periods": ["8"],
+              "labels": [
+                "Jakub"
+              ]
             },
             {
               "name": "TOK",
@@ -197,7 +238,8 @@
             },
             {
               "name": "English",
-              "periods": ["1"]
+              "periods": ["1"],
+              "room": "222"
             },
             {
               "name": "Economics",
@@ -212,8 +254,27 @@
               "periods": ["4"]
             },
             {
+              "name": "free",
+              "periods": ["5"],
+              "labels": [
+                "Alwin",
+                "Jakub",
+                "Nikitas"
+              ]
+            },
+            {
               "name": "History",
               "periods": ["6"]
+            },
+            {
+              "name": "free",
+              "periods": ["7"],
+              "labels": [
+                "Alwin",
+                "Jakub",
+                "Andri",
+                "Nikitas"
+              ]
             },
             {
               "name": "Computer Science",
@@ -244,8 +305,33 @@
               "periods": ["3"]
             },
             {
+              "name": "free",
+              "periods": ["4"],
+              "labels": [
+                "Jakub",
+                "Andri"
+              ]
+            },
+            {
+              "name": "free",
+              "periods": ["6"],
+              "labels": [
+                "Alwin"
+              ]
+            },
+            {
+              "name": "free",
+              "periods": ["7"],
+              "labels": [
+                "Alwin",
+                "Jakub",
+                "Andri"
+              ]
+            },
+            {
               "name": "English",
-              "periods": ["8"]
+              "periods": ["8"],
+              "room": "222"
             },
             {
               "name": "History",
@@ -271,6 +357,14 @@
             {
               "name": "English",
               "periods": ["3"]
+            },
+            {
+              "name": "free",
+              "periods": ["4"],
+              "labels": [
+                "Jakub",
+                "Alwin"
+              ]
             },
             {
               "name": "Computer Science",
@@ -307,6 +401,33 @@
               "periods": ["4"]
             },
             {
+              "name": "free",
+              "periods": ["5"],
+              "labels": [
+                "Jakub",
+                "Andri",
+                "Nikitas"
+              ]
+            },
+            {
+              "name": "free",
+              "periods": ["6"],
+              "labels": [
+                "Jakub",
+                "Nikitas"
+              ]
+            },
+            {
+              "name": "free",
+              "periods": ["7"],
+              "labels": [
+                "Jakub",
+                "Alwin",
+                "Andri",
+                "Nikitas"
+              ]
+            },
+            {
               "name": "German",
               "periods": ["9"],
               "room": "131"
@@ -326,6 +447,13 @@
               "periods": ["H"]
             },
             {
+              "name": "free",
+              "periods": ["1"],
+              "labels": [
+                "Alwin"
+              ]
+            },
+            {
               "name": "Computer Science",
               "periods": ["2"],
               "room": "E50"
@@ -340,8 +468,19 @@
               "periods": ["5", "6"]
             },
             {
+              "name": "free",
+              "periods": ["7"],
+              "labels": [
+                "Jakub",
+                "Alwin",
+                "Andri",
+                "Nikitas"
+              ]
+            },
+            {
               "name": "English",
-              "periods": ["8", "9"]
+              "periods": ["8", "9"],
+              "room": "222"
             },
             {
               "name": "History",
@@ -366,12 +505,31 @@
               "room": "E50"
             },
             {
+              "name": "free",
+              "periods": ["5"],
+              "labels": [
+                "Andri",
+                "Alwin"
+              ]
+            },
+            {
               "name": "History",
               "periods": ["6"]
             },
             {
+              "name": "free",
+              "periods": ["7"],
+              "labels": [
+                "Jakub",
+                "Alwin",
+                "Andri",
+                "Nikitas"
+              ]
+            },
+            {
               "name": "English",
-              "periods": ["8"]
+              "periods": ["8"],
+              "room": "223"
             },
             {
               "name": "Economics",
@@ -403,6 +561,16 @@
               "periods": ["5", "6"]
             },
             {
+              "name": "free",
+              "periods": ["7"],
+              "labels": [
+                "Jakub",
+                "Alwin",
+                "Andri",
+                "Nikitas"
+              ]
+            },
+            {
               "name": "Computer Science",
               "periods": ["8", "9"],
               "room": "214"
@@ -413,6 +581,13 @@
     }
   ],
   "classes": [
+    {
+      "type": "free",
+      "name": "free",
+      "teacher": null,
+      "room": null,
+      "color": "rgb(245, 245, 245)"
+    },
     {
       "name": "Economics",
       "teacher": "Ms. Blink",

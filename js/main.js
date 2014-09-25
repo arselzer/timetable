@@ -118,6 +118,7 @@ $.getJSON("timetable.json", function(data) {
       cl.width = width / (dayTime / sectionWidth)
       cl.periods = fullPeriods
       cl.name = cl.name
+      cl.type = cl.class.type
       if (!cl.room) {
         cl.room = cl.class.room
       }
@@ -152,17 +153,26 @@ $.getJSON("timetable.json", function(data) {
         sectionDiv.addClass("class")
           .css("margin-right", section.distanceToNext)
 
-        sectionDiv.append($("<div>")
-          .addClass("name")
-          .text(section.name))
+        if (section.type !== "free") {
+          sectionDiv.append($("<div>")
+            .addClass("name")
+            .text(section.name))
 
         sectionDiv.append($("<div>")
           .addClass("teacher")
           .text(section.class.teacher))
 
-        sectionDiv.append($("<div>")
-          .addClass("room")
-          .text(section.room))
+          sectionDiv.append($("<div>")
+            .addClass("room")
+            .text(section.room))
+        }
+        else {
+          section.labels.forEach(function(label) {
+            sectionDiv.append($("<div>")
+              .addClass("label")
+              .text(label))
+          })
+        }
       }
 
       row.append(sectionDiv)
