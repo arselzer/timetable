@@ -155,5 +155,14 @@ TimeTable.prototype = {
         outWeek = w
     })
     return outWeek || null
+  },
+  getWeek: function(name) {
+    var found
+    this.weeks.forEach(function(w) {
+      if (w.name === name)
+        found = w
+    })
+
+    return found
   }
 }

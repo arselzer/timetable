@@ -6,6 +6,10 @@
 var tt = $(".timetable")
 
 $.getJSON("timetable.json", function(data) {
+  var location
+  if (window.location.hash.length > 0)
+    location = window.location.hash.slice(1)
+
   var t = new TimeTable(data)
 
   /*
@@ -26,7 +30,13 @@ $.getJSON("timetable.json", function(data) {
 
   tt.append(header)
 
-  var weeks = t.getRenderData(t.getCurrentWeek())
+  var weeks
+  if (location) {
+    weeks = t.getRenderData(t.getWeek(location))
+  }
+  else {
+    weeks = t.getRenderData(t.getCurrentWeek())
+  }
   // console.log(weeks)
 
   /*
