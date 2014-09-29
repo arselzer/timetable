@@ -118,9 +118,10 @@ TimeTable.prototype = {
     return days
   },
   getCurrentWeek: function() {
-    var date = new Date()
+    var currentDate = new Date()
+    console.log(currentDate)
 
-    var foundWeek
+    var foundWeekName
 
     // Week A, Week B and so
     for (var key in this.weekDates) {
@@ -128,33 +129,31 @@ TimeTable.prototype = {
 
       var found = false
 
-      // [month, day] pairs
+      // [month, day, year] pairs
       week.forEach(function(start) {
-        var month = start[1]
         var day = start[0]
+        var month = start[1]
         var year = start[2]
+        var weekStart = new Date(year, month - 1, day)
 
         var sevenDays = 7 * 24 * 60 * 60 * 1000
 
-        var weekStart = new Date(year, month, day)
-        var difference = weekStart - date
+        var difference = currentDate - weekStart
 
-        if (difference < sevenDays && !(difference > sevenDays)) {
+        console.log(key, start, difference / (1000 * 60 * 60) / 24, difference)
+
+        if ((difference < sevenDays) && (difference > 0)) {
+          console.log(true)
           found = true
         }
       })
 
       if (found) {
-        foundWeek = key
+        foundWeekName = key
       }
     }
 
-    var outWeek;
-    this.weeks.forEach(function(w) {
-      if (w.name === foundWeek)
-        outWeek = w
-    })
-    return outWeek || null
+    return this.getWeek(foundWeekName) || null
   },
   getWeek: function(name) {
     var found
