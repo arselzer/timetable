@@ -6,10 +6,61 @@
   -o-box-sizing: border-box;
 }
 
-.main {
+body {
+  margin: 0;
+  background-color: rgb(53, 83, 103);
+}
+
+.menu-bar {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(39, 69, 133);
+
+  /*padding: 2px;*/
+}
+
+.menu-bar .items {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-bar .items .item {
+  display: inline-block;
+  height: 40px;
+  /*margin-right: 8px; */
+  padding: 2px 4px;
+
+  /*border: 1px solid rgb(222, 223, 223); */
+
+  font-size: 30px;
+  color: rgb(242, 244, 245);
+  font-family: Helvetica, arial, sans-serif;
+
+  transition: background-color box-shadow ease-in .2s;
+  -webkit-transition: background-color box-shadow ease-in .2s;
+  -moz-transition: background-color box-shadow ease-in .2s;
+  -ms-transition: background-color box-shadow ease-in .2s;
+
+  cursor: pointer;
+}
+
+.menu-bar a {
+  text-decoration: none;
+  color: rgb(242, 244, 245);
+}
+
+.menu-bar .items .item:hover {
+  background-color: rgb(51, 109, 142);
+  box-shadow: 0px 0px 4px rgb(56, 56, 56);
+}
+
+.main, .current-view {
   font-family: Helvetiva, Arial, sans-serif;
   margin: 10px auto;
-  width: 1000px;
+  padding: 6px;
+  width: 1020px;
+  background-color: rgb(239, 243, 244);
+  box-shadow: 0 0 4px rgb(56, 56, 56);
 }
 
 .timetable {
@@ -18,7 +69,8 @@
 
 .current-view {
   height: 80px;
-  font-size: 26px;
+  font-size: 28px;
+  color: rgb(31, 41, 75);
   padding-top: 28px;
   text-align: center;
 }

@@ -15,7 +15,7 @@ function getMode() {
 
 function render(mode, tt, data) {
   switch (mode) {
-  case "phone":
+  case "mobile":
     renderTimetablePhone(tt, data)
     break;
 
@@ -26,13 +26,21 @@ function render(mode, tt, data) {
   }
 }
 
+setMode("default")
+
 $.getJSON("timetable.json", function(data) {
   if (isMobile.phone) {
-    setMode("phone")
+    setMode("mobile")
   }
-  setMode("phone")
 
   render(getMode(), tt, data)
+
+  window.onhashchange = function() {
+    var hash = window.location.hash
+
+    setMode(hash)
+    render(getMode(), tt, data)
+  }
 }).fail(function(err) {
   console.log(err)
 })
