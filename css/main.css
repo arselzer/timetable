@@ -16,7 +16,14 @@ body {
   height: 40px;
   background-color: rgb(39, 69, 133);
 
-  /*padding: 2px;*/
+  padding: 2px;
+}
+
+.menu-bar .logo {
+  height: 36px;
+  font-size: 26px;
+  color: rgb(242, 244, 245);
+  font-family: Lato, Helvetica, arial, sans-serif;
 }
 
 .menu-bar .items {
