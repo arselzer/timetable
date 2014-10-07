@@ -1,16 +1,24 @@
 /*
- *  Copyright © (c) 2014 Alexander Selzer <aselzer3@gmail.com>
+ * Copyright © (c) 2014 Alexander Selzer <aselzer3@gmail.com>
  * Apache-2 License
  */
 
 var tt = $(".timetable")
 
 function setMode(mode) {
-  window.sessionStorage.setItem("mode", mode)
+  $(".menu-bar .item").removeClass("current")
+  $(".menu-bar .item[data-mode='" + mode + "']").addClass("current")
+
+  localStorage_.setItem("mode", mode)
+  modeChange();
 }
 
 function getMode() {
-  return window.sessionStorage.getItem("mode") || null
+  return localStorage_.getItem("mode") || null
+}
+
+function modeChange() {
+
 }
 
 function render(mode, tt, data) {
@@ -26,21 +34,29 @@ function render(mode, tt, data) {
   }
 }
 
-setMode("default")
-
 $.getJSON("timetable.json", function(data) {
-  if (isMobile.phone) {
-    setMode("mobile")
+  modeChange = function() {
+    render(getMode(), tt, JSON.parse(JSON.stringify(data))) // clone object
   }
 
-  render(getMode(), tt, data)
-
-  window.onhashchange = function() {
-    var hash = window.location.hash
-
-    setMode(hash)
-    render(getMode(), tt, data)
+  if (!getMode()) {
+    if (isMobile.phone) {
+      setMode("mobile")
+    }
+    else {
+      setMode("default")
+    }
   }
+  else {
+    setMode(getMode())
+  }
+
 }).fail(function(err) {
   console.log(err)
+})
+
+$(".menu-bar .item").on("click", function() {
+  var mode = $(this).data("mode")
+
+  setMode(mode)
 })

@@ -21,3 +21,16 @@ function getTextColorFromBackground(c) {
     return rgb(222, 222, 222)
   }
 }
+
+// wtf, firefox
+localStorage_ = {}
+
+localStorage_.getItem = function(key) {
+  return this[key]
+}
+
+localStorage_.setItem = function(key, value) {
+  this[key] = value
+}
+
+window.localStorage = localStorage_

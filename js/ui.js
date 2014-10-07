@@ -1,4 +1,6 @@
 function renderTimetableScreen(tt, data, dimensions) {
+  tt.empty()
+
   var location
   if (window.location.hash.length > 0)
     location = window.location.hash.slice(1)
@@ -30,7 +32,8 @@ function renderTimetableScreen(tt, data, dimensions) {
   else {
     weeks = t.getRenderData(t.getCurrentWeek())
   }
-  // console.log(weeks)
+  console.log("location:", location)
+  console.log("weeks:", weeks)
 
   /*
   * Create rows (days) & periods (sections)
@@ -136,6 +139,7 @@ function renderTimetableScreen(tt, data, dimensions) {
 }
 
 function renderTimetablePhone(tt, data) {
+  tt.empty()
   var location
   if (window.location.hash.length > 0)
     location = window.location.hash.slice(1)

@@ -7,8 +7,14 @@
 }
 
 body {
+  width: 100%;
   margin: 0;
   background-color: rgb(53, 83, 103);
+}
+
+.container {
+  width: 1020px;
+  margin: 0 auto;
 }
 
 .menu-bar {
@@ -21,6 +27,7 @@ body {
 
 .menu-bar .logo {
   height: 36px;
+  float: left;
   font-size: 26px;
   color: rgb(242, 244, 245);
   font-family: Lato, Helvetica, arial, sans-serif;
@@ -31,15 +38,20 @@ body {
   text-align: center;
 }
 
+.menu-bar a {
+  text-decoration: none;
+  color: rgb(242, 244, 245);
+}
+
 .menu-bar .items .item {
   display: inline-block;
-  height: 40px;
+  height: 36px;
   /*margin-right: 8px; */
-  padding: 2px 4px;
+  padding: 3px 4px;
 
   /*border: 1px solid rgb(222, 223, 223); */
 
-  font-size: 30px;
+  font-size: 28px;
   color: rgb(242, 244, 245);
   font-family: Helvetica, arial, sans-serif;
 
@@ -48,12 +60,15 @@ body {
   -moz-transition: background-color box-shadow ease-in .2s;
   -ms-transition: background-color box-shadow ease-in .2s;
 
+  background-color: rgb(51, 101, 142);
+  box-shadow: 0px 0px 2px rgb(56, 56, 56);
+  border-radius: 2px;
+
   cursor: pointer;
 }
 
-.menu-bar a {
-  text-decoration: none;
-  color: rgb(242, 244, 245);
+.menu-bar .items .item.current {
+  background-color: rgb(52, 128, 167)
 }
 
 .menu-bar .items .item:hover {
@@ -78,6 +93,7 @@ body {
   height: 80px;
   font-size: 28px;
   color: rgb(31, 41, 75);
+  background-color: rgb(232, 241, 245);
   padding-top: 28px;
   text-align: center;
 }

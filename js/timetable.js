@@ -57,8 +57,7 @@ function TimeTable(input) {
   var currentWeek = this.getCurrentWeek()
 
   if (!currentWeek)
-    return console.log("fail!")
-
+    return console.log("week not known")
 }
 
 TimeTable.prototype = {
@@ -69,7 +68,7 @@ TimeTable.prototype = {
       var day = week.days[key]
       /*
         Classes are transformed to Easy-to-render "sections"
-        Sections are basically lessons.
+        Sections are basically lessons or free time.
       */
       var sections = []
 
@@ -84,7 +83,9 @@ TimeTable.prototype = {
 
         self.periods.forEach(function(period) {
           cl.periods.forEach(function(period2) {
+            //console.log(period.name, period2)
             if (period.name === period2) {
+              //console.log("match")
               fullPeriods.push(period)
             }
           })
@@ -140,10 +141,7 @@ TimeTable.prototype = {
 
         var difference = currentDate - weekStart
 
-        console.log(key, start, difference / (1000 * 60 * 60) / 24, difference)
-
         if ((difference < sevenDays) && (difference > 0)) {
-          console.log(true)
           found = true
         }
       })
