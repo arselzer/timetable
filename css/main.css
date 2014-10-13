@@ -13,7 +13,8 @@ body {
 }
 
 .container {
-  width: 1020px;
+  width: 96%;
+  overflow: scroll;
   margin: 0 auto;
 }
 
@@ -21,6 +22,7 @@ body {
   width: 100%;
   height: 40px;
   background-color: rgb(39, 69, 133);
+  overflow: hidden;
 
   padding: 2px;
 }
@@ -76,7 +78,8 @@ body {
   box-shadow: 0px 0px 4px rgb(56, 56, 56);
 }
 
-.main, .current-view {
+.main,
+.current-view {
   font-family: Helvetiva, Arial, sans-serif;
   margin: 10px auto;
   padding: 6px;
@@ -85,12 +88,32 @@ body {
   box-shadow: 0 0 4px rgb(56, 56, 56);
 }
 
-.timetable {
-  min-width: 1040px;
+.main {
+  width: auto;
+}
+
+.timetable-large {
+  width: 1040px;
+}
+
+.timetable-mobile {
+  min-width: 0;
+  width: 100%;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.timetable-mobile {
+  overflow-y: scroll;
+}
+
+.timetable-mobile .timetable {
+  overflow-x: hidden;
 }
 
 .current-view {
-  height: 80px;
+  width: 100%;
+  min-height: 80px;
   font-size: 28px;
   color: rgb(31, 41, 75);
   background-color: rgb(232, 241, 245);
@@ -119,6 +142,12 @@ body {
   display: block;
   height: 100px;
   margin-top: 2px;
+}
+
+.timetable-mobile .day {
+  display: block;
+  height: 100%;
+  margin: 0;
 }
 
 .day > .name {
@@ -168,4 +197,21 @@ body {
   font-size: 14px;
   padding-top: 41px;
   text-align: center;
+}
+
+/* Swipejs */
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
 }

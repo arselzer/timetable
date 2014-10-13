@@ -1,5 +1,12 @@
 function renderTimetableScreen(tt, data, dimensions) {
+  if (window.swipe)
+    window.swipe.kill()
+
   tt.empty()
+  tt.parent().attr("style", "") // height and so
+  tt.parent().removeClass("timetable-mobile")
+  tt.parent().addClass("timetable-large")
+  $(".current-view").show()
 
   var location
   if (window.location.hash.length > 0)
@@ -140,12 +147,84 @@ function renderTimetableScreen(tt, data, dimensions) {
 
 function renderTimetablePhone(tt, data) {
   tt.empty()
+  tt.parent().addClass("timetable-mobile")
+
+  $(".current-view").hide()
+
+  tt.parent().css("height", ($(window).height() - 70) + "px")
+
   var location
   if (window.location.hash.length > 0)
     location = window.location.hash.slice(1)
 
   var t = new TimeTable(data)
 
-  tt.append($("<div>").text("phone timetable"))
+  var slider = $("<div class='slider'>")
+  tt.append(slider)
+  var view = $("<div class='swipe-wrap'>")
+  slider.append(view)
 
+  window.swipe = Swipe(slider[0]);
+
+  /**
+  * Hack:
+  * https://github.com/thebird/Swipe/issues/121
+  */
+
+  setTimeout(function() {
+    window.swipe.setup();
+  }, 10);
+
+  var week = t.getRenderData(t.getCurrentWeek())
+
+  week.forEach(function(day, i) {
+    var dayDiv = $("<div class='day'>")
+
+    console.log(day)
+
+    day.sections.forEach(function(section) {
+      var color = /rgb\((.*)\)/.exec(section.class.color)
+      var c = color[1].split(",").map(function(val) {
+        return val.trim()
+      })
+
+      var sectionDiv = $("<div>")
+        .css("height", section.width * 1.4)
+        .css("width", "100%")
+        .css("background-color", section.class.color)
+        .css("color", getTextColorFromBackground({r: c[0], g: c[1], b: c[2]}))
+        .addClass("section")
+
+      if (section.class) {
+        sectionDiv.addClass("class")
+          .css("margin-bottom", section.distanceToNext)
+
+        if (section.type !== "free") {
+          sectionDiv.append($("<div>")
+            .addClass("name")
+            .text(section.name))
+
+        sectionDiv.append($("<div>")
+          .addClass("teacher")
+          .text(section.class.teacher))
+
+          sectionDiv.append($("<div>")
+            .addClass("room")
+            .text(section.room))
+        }
+        else {
+          section.labels.forEach(function(label) {
+            sectionDiv.append($("<div>")
+              .addClass("label")
+              .text(label))
+          })
+        }
+      }
+
+      dayDiv.append(sectionDiv)
+
+    })
+
+    view.append(dayDiv)
+  })
 }

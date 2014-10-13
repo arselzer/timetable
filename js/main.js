@@ -36,6 +36,10 @@ function render(mode, tt, data) {
 
 $.getJSON("timetable.json", function(data) {
   modeChange = function() {
+    tt.remove()
+    tt = $("<div class='timetable'>")
+    $(".main").append(tt)
+
     render(getMode(), tt, JSON.parse(JSON.stringify(data))) // clone object
   }
 
