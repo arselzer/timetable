@@ -3,8 +3,8 @@
  * Apache-2 License
  */
 
-function rgb(r, g, b) {
-  return "rgb(" + r + "," + g + "," + b + ")"
+function rgb(r, g, b, a) {
+  return (a ? "rgba(" :"rgb(") + r + "," + g + "," + b + (a ? "," + a : "") + ")"
 }
 
 function getTextColorFromBackground(c) {
@@ -22,15 +22,43 @@ function getTextColorFromBackground(c) {
   }
 }
 
-// wtf, firefox
-localStorage_ = {}
+/* sessionStorage -> localStorage -> local variables fallback */
 
-localStorage_.getItem = function(key) {
-  return this[key]
+var storage = {}
+
+storage.getItem = function(key) {
+  var res
+  try {
+    console.log("sessionStorage")
+    res = window.sessionStorage.getItem(key)
+  }
+  catch (err) {
+    try {
+      console.log("localStorage")
+      res = window.localStorage.getItem(key)
+    }
+    catch (err2) {
+      console.log("fallback")
+      res = this[key]
+    }
+  }
+  return res
 }
+storage.get = storage.getItem
 
-localStorage_.setItem = function(key, value) {
-  this[key] = value
+storage.setItem = function(key, value) {
+  try {
+    sessionStorage.setItem(key, value)
+  }
+  catch (err) {
+    try {
+      window.localStorage.setItem(key, value)
+    }
+    catch (err2) {
+      this[key] = value
+    }
+  }
 }
+storage.set = storage.setItem
 
-window.localStorage = localStorage_
+window.storage = storage

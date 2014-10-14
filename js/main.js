@@ -5,20 +5,19 @@
 
 var tt = $(".timetable")
 
+function onModeChange() {}
+
 function setMode(mode) {
+  // Make current mode button look selected
   $(".menu-bar .item").removeClass("current")
   $(".menu-bar .item[data-mode='" + mode + "']").addClass("current")
 
-  localStorage_.setItem("mode", mode)
-  modeChange();
+  storage.set("mode", mode)
+  onModeChange();
 }
 
 function getMode() {
-  return localStorage_.getItem("mode") || null
-}
-
-function modeChange() {
-
+  return storage.get("mode") || null
 }
 
 function render(mode, tt, data) {
@@ -35,7 +34,7 @@ function render(mode, tt, data) {
 }
 
 $.getJSON("timetable.json", function(data) {
-  modeChange = function() {
+  onModeChange = function() {
     tt.remove()
     tt = $("<div class='timetable'>")
     $(".main").append(tt)

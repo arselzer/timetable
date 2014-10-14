@@ -6,6 +6,10 @@
   -o-box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
   width: 100%;
   margin: 0;
