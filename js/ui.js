@@ -189,7 +189,7 @@ function renderTimetablePhone(tt, data) {
       })
 
       var sectionDiv = $("<div>")
-        .css("height", section.width * 1.4)
+        .css("min-height", section.width * 1.4)
         .css("width", "100%")
         .css("background-color", section.class.color)
         .css("color", getTextColorFromBackground({r: c[0], g: c[1], b: c[2]}))

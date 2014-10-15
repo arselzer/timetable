@@ -177,6 +177,20 @@ body {
   /*background-color: rgb(185, 201, 205); */
 }
 
+.timetable-mobile .day .section {
+  font-size: 24px;
+  overflow: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
+}
+
 .section {
   position: relative;
   curser: default;
@@ -186,6 +200,11 @@ body {
   display: block;
   padding-top: 4px;
   pointer-events: none;
+}
+
+.timetable-mobile .day .section > div {
+  margin: 0 auto;
+  float: left;
 }
 
 .section > .popup {
